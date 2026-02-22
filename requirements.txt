@@ -1,0 +1,14 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+lightgbm
+tensorflow
+plotly
+nbformat
+ipykernel
+scipy
+imbalanced-learn
+kaleido

@@ -1,0 +1,25 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+ENV/
+
+# Data and Models (Optional, but good practice for large files)
+*.csv
+*.xlsx
+*.pickle
+*.h5
+*.joblib
+
+# Charts output (keep them if you want them in GitHub, but usually they are generated)
+# charts/
+
+# macOS
+.DS_Store
+__MACOSX/
