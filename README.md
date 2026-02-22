@@ -58,8 +58,11 @@ Identifies at-risk customers with high precision to help businesses proactively 
    pip install -r requirements.txt
    ```
 
-3. **Run the analysis:**
-   Open `AI_Predictive_Analytics.ipynb` in Jupyter Lab or VS Code and run all cells.
+3. **Run the Interactive Dashboard:**
+   ```bash
+   streamlit run app.py
+   ```
+   *This will open a live, interactive version of the analysis in your default web browser.*
 
 ---
 

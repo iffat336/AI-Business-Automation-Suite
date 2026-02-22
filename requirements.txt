@@ -12,3 +12,5 @@ ipykernel
 scipy
 imbalanced-learn
 kaleido
+streamlit
+watchdog
