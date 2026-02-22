@@ -45,10 +45,14 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# Path Handling
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Data Loading Functions
 @st.cache_data
 def load_sales_data():
-    df = pd.read_csv('sales_data.csv', encoding='latin-1')
+    path = os.path.join(BASE_DIR, 'sales_data.csv')
+    df = pd.read_csv(path, encoding='latin-1')
     df['Order Date'] = pd.to_datetime(df['Order Date'], format='%d/%m/%Y', dayfirst=True, errors='coerce')
     if df['Order Date'].isnull().sum() > len(df) * 0.5:
         df['Order Date'] = pd.to_datetime(df['Order Date'], format='mixed', dayfirst=False)
@@ -60,7 +64,8 @@ def load_sales_data():
 
 @st.cache_data
 def load_churn_data():
-    df = pd.read_csv('churn_data.csv')
+    path = os.path.join(BASE_DIR, 'churn_data.csv')
+    df = pd.read_csv(path)
     # Preprocess TotalCharges
     df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
     df['TotalCharges'] = df['TotalCharges'].fillna(0)
@@ -114,7 +119,7 @@ if page == "Executive Overview":
             st.rerun()
 
     st.markdown("---")
-    st.image("charts/dashboard/01_sales_executive_dashboard.png", caption="Sample Executive Report", use_container_width=True)
+    st.image(os.path.join(BASE_DIR, "charts/dashboard/01_sales_executive_dashboard.png"), caption="Sample Executive Report", use_container_width=True)
 
 # --- Page 2: Sales Forecasting ---
 elif page == "Sales Forecasting":
