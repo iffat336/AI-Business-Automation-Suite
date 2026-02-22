@@ -12,5 +12,6 @@ ipykernel
 scipy
 imbalanced-learn
 kaleido
-streamlit
+streamlit>=1.30.0
 watchdog
+protobuf<=3.20.3
