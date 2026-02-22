@@ -5,13 +5,12 @@ seaborn
 scikit-learn
 xgboost
 lightgbm
-tensorflow
+tensorflow-cpu
 plotly
 nbformat
 ipykernel
 scipy
 imbalanced-learn
 kaleido
-streamlit>=1.30.0
+streamlit>=1.40.0
 watchdog
-protobuf<=3.20.3
