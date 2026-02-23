@@ -11,7 +11,7 @@ venv/
 ENV/
 
 # Data and Models (Optional, but good practice for large files)
-*.csv
+# *.csv
 *.xlsx
 *.pickle
 *.h5
